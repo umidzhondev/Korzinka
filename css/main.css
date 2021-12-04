@@ -1,0 +1,159 @@
+body{
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box !important;
+}
+@font-face {
+    font-family: Poppins;
+    src: url("../font/Poppins-Medium.ttf");
+}
+.korzina__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.product__cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 40px;
+    grid-template-rows: repeat(2,1fr);
+    background-color: rgba(0, 112, 255, 0.57);
+    padding: 40px 50px;
+    border-radius: 10px;
+    width: 90vw;
+    min-height: 50vh;
+}
+.product__card{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+.product__card-image{
+    width: 90%;
+    height: 200px;
+}
+.product__card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.btn-danger{
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+.korzinka__modal{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 100%;
+    background-color: #000000e6
+}
+.korzinka__modal.visible{
+    display: flex;
+    z-index: 999;
+}
+.korzinka__cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 40px;
+    grid-template-rows: repeat(2,1fr);
+    box-shadow: 0 0 10px 4px white;
+    padding: 50px 60px;
+    border-radius: 10px;
+}
+.korzinka__card{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+.korzinka__card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 1400px){
+    .product__cards , .korzinka__cards{
+        padding: 30px 20px;
+        grid-gap: 20px;
+    }
+}
+@media (max-width: 1300px){
+    .product__cards , .korzinka__cards{
+       grid-template-columns: repeat(3,1fr);
+       grid-template-rows: repeat(3,1fr);
+    }
+    .korzina__title{
+        font-size: 2rem !important;
+    }
+}
+@media (max-width: 1000px){
+    .product__cards{
+       width: 95vw;
+    }
+    .product__card-image{
+        height: 170px;
+    }
+}
+@media (max-width: 768px){
+    .product__card-image{
+        height: 150px;
+    }
+    .bg-primary {
+        font-size: 1.8rem !important;
+    }
+    .bg-warning{
+        font-size: 1.8rem !important;
+    }
+    .korzina__title{
+        font-size: 1.8rem !important;
+        margin: 2rem 0 !important;
+    }
+}
+@media (max-width: 578px){
+    .product__cards ,.korzinka__cards {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(8,1fr);
+        width: 80vw;
+     }
+    .product__card-image , .korzinka__card img{
+        height: 180px;
+    }
+    .bg-primary {
+        font-size: 1.8rem !important;
+    }
+    .bg-warning{
+        font-size: 1.8rem !important;
+    }
+    .btn-danger{
+        font-size: 1rem !important;
+    }
+    .korzina__title{
+        font-size: 1.8rem !important;
+        margin: 1.5rem 0 !important;
+    }
+}
