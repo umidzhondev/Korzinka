@@ -62,20 +62,20 @@ body {
     display: none;
     align-items: center;
     flex-direction: column;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    padding: 30px 0;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background-color: #000000e6
 }
-
 .korzinka__modal.visible {
     display: flex;
     z-index: 999;
 }
-
+.korzina__content.hidden{
+    display: none ;
+}
 .korzinka__cards {
     display: flex;
     align-items: center;
@@ -83,7 +83,6 @@ body {
     flex-wrap: wrap;
     border-radius: 10px;
 }
-
 .korzinka__card {
     height: 250px;
     border-radius: 10px;
@@ -91,7 +90,6 @@ body {
     padding: 30px;
     margin: 20px;
 }
-
 .korzinka__card img {
     width: 250px;
     height: 100%;
