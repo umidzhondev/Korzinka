@@ -21,8 +21,9 @@ buyBtns.forEach((btn, index) => {
         newCard.classList.add("korzinka__card");
 
         korzinkaContent.append(newCard)
-
-        productCards[index].remove()
-
+        productCards[index].remove();
     })
 })
+
+const test = document.querySelector(".test");
+
